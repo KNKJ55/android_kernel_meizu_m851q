@@ -41,3 +41,5 @@ obj-$(CONFIG_SND_SOC_EXT_CODEC) += snd-soc-sdm660-common.o
 obj-$(CONFIG_SND_SOC_EXT_CODEC) += snd-soc-ext-codec.o
 
 ccflags-y += -Isound/soc/msm/
+# for tas2560 dsp algo controls
+obj-$(CONFIG_SND_SOC_TAS2560) += tas2560-algo.o
