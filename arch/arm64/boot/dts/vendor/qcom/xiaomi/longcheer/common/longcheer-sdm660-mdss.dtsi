@@ -20,6 +20,7 @@
 #include "display/dsi-panel-shenchao-td4310-1080p-video.dtsi"
 #include "display/dsi-panel-tianma-td4310-1080p-video.dtsi"
 #include "display/dsi-panel-huaxing-nt36672-1080p-video.dtsi"
+#include "display/dsi-panel-tianma-s6d6ft0-1080p-video.dtsi"
 
 /* sdm660-mdss-panels.dtsi common diff */
 &dsi_panel_pwr_supply {
@@ -146,4 +147,27 @@
                 26 20 0a 0b 06 03 04 a0];
         qcom,mdss-dsi-min-refresh-rate = <48>;
         qcom,mdss-dsi-max-refresh-rate = <60>;
+};
+
+&dsi_s6d6ft0_tianma_fhd_video {
+        qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
+        qcom,mdss-dsi-panel-timings-phy-v2 = <0x2621090b 0x60304a0 
+		0x2621090b 0x60304a0 
+		0x2621090b 0x60304a0 
+		0x2621090b 0x60304a0 
+		0x2620090a 0x60304a0>;
+        //qcom,esd-check-enabled;
+        qcom,mdss-dsi-panel-status-check-mode = "reg_read";
+        qcom,mdss-dsi-panel-status-command = <0x6010001 0x10a>;
+        qcom,mdss-dsi-panel-status-command-state = "dsi_hs_mode";
+        qcom,mdss-dsi-panel-status-value = <0x9c>;
+        qcom,mdss-dsi-panel-status-read-length = <0x1>;
+        qcom,mdss-dsi-panel-max-error-count = <0x3>;
+        qcom,mdss-dsi-on-command = <0x39010000 0x39f 0xa5a50501 0x7800 0x2110005 0x1000000 0x25510 0x39010000 0x3f0 0x5a5a3901 0x0 0x2739439 0x1000000 0x3dea00 0x73111b23 0x2a405970 0x6ea18692 0x9fabb84d 0x59657f00 0x73111b23 0x2a405970 0x6ea18692 0x9fabb84d 0x59657f00 0x73111b23 0x2a405970 0x6ea18692 0x9fabb84d 0x59657f39 0x1000000 0x3deb00 0x73111b23 0x2a405970 0x6ea18692 0x9fabb84d 0x59657f00 0x73111b23 0x2a405970 0x6ea18692 0x9fabb84d 0x59657f00 0x73111b23 0x2a405970 0x6ea18692 0x9fabb84d 0x59657f39 0x1000000 0x3f0a5 0xa5050100 0x2 0x29003901 0x0 0x39f5a5a>;
+        qcom,mdss-dsi-off-command = <0x39010000 0x39f 0xa5a50501 0x0 0x2280005 0x1000050 0x21000 0x39010000 0x3f0 0x5a5a3901 0x0 0x2739039 0x1000000 0x3f0a5 0xa5050100 0x2 0x24003901 0x0 0x39f5a5a>;
+        qcom,mdss-dsi-on-command-state = "dsi_hs_mode";
+        qcom,mdss-dsi-off-command-state = "dsi_hs_mode";
+        qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_wled";
+        qcom,mdss-dsi-bl-min-level = <0x1>;
+        qcom,mdss-dsi-bl-max-level = <0xfff>;
 };

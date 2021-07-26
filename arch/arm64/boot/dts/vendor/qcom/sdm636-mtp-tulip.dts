@@ -20,9 +20,10 @@
 / {
 	model = "Qualcomm Technologies, Inc. SDM 636 PM660 + PM660L MTP E7T";
 	compatible = "qcom,sdm636-mtp", "qcom,sdm636", "qcom,mtp";
-	qcom,board-id = <0x40008 0>; 
-	qcom,pmic-id = <0x0001001b 0x0101011a 0x0 0x0>,
-			<0x0001001b 0x0201011a 0x0 0x0>;
+        qcom,board-id = <0x8 0>;
+        qcom,msm-id = <345 0x0>;
+        qcom,pmic-id = <0x1001b 0x101011a 0x0 0x0 0x1001b 0x201011a 0x0 0x0>;
+
 };
 
 &tavil_snd {
