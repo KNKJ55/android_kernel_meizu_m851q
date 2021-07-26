@@ -24,7 +24,7 @@
 #include <linux/platform_device.h>
 #include <linux/regulator/consumer.h>
 #include <linux/slab.h>
-#include <linux/wakelock.h>
+//#include <linux/wakelock.h>
 
 #ifdef SAMSUNG_PROJECT
 #include <linux/sec_sysfs.h>
