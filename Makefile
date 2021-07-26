@@ -4,6 +4,8 @@ SUBLEVEL = 205
 EXTRAVERSION =
 NAME = Blurry Fish Butt
 
+ARCH=arm64
+CROSS_COMPILE=aarch64-linux-android-
 # *DOCUMENTATION*
 # To see a list of typical targets execute "make help"
 # More info can be located in ./README
